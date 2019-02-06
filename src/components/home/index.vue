@@ -6,6 +6,7 @@
     <div id="app">
         <img src="../../assets/logo.png">
         <h1>{{ msg }}</h1>
+        <h3>hi</h3>
         <router-link to="/dashboard">Go To Dashboard</router-link>
     </div>
 </template>

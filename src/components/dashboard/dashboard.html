@@ -1,6 +1,20 @@
 
-<section class="dashboard">
-  <h1>dashboard Component</h1>
-  <img class="docker-logo" src="../../assets/docker.png" height="648" width="1240">
+<section class="dashboard" >
+  <img class="docker-logo" src="../../assets/docker.png" height="216" width="413">
+  <table>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>ports</th>
+      <th>volumes</th>
+    </tr>
+    <tr v-if="containers" v-for="(container,index) in containers" :key="index">
+      <td>{{container.id}}</td>
+      <td>{{container.name}}</td>
+      <td>{{container.ports}}</td>
+      <td>{{container.volumes}}</td>
+    </tr>
+  </table>
+  <router-link to="add"> Add Container</router-link>
 </section>
 
